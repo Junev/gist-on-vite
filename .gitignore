@@ -12,3 +12,10 @@ package-lock.json
 pnpm-lock.yaml
 
 *.log
+
+bootstrap*
+echarts*
+element
+images
+css
+js

@@ -1,4 +1,5 @@
-import path from 'path'
+import path, { resolve } from 'path'
+import fs from 'fs'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
@@ -16,20 +17,36 @@ import {
 
 const pathSrc = path.resolve(__dirname, 'src')
 
+const htmlPattern = /.html$/
+function getRollupInput () {
+  return fs.readdirSync("./")
+            .filter(c => htmlPattern.test(c))
+            .reduce((pre,cur) => { 
+              const name = cur.slice(0, -5)
+              pre[name] = path.resolve(cur); 
+              return pre } 
+              , {})
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    rollupOptions: {
+      input: getRollupInput()
+    }
+  },
   resolve: {
     alias: {
       '~/': `${pathSrc}/`,
     },
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@use "~/styles/element/index.scss" as *;`,
-      },
-    },
-  },
+  // css: {
+  //   preprocessorOptions: {
+  //     scss: {
+  //       additionalData: `@use "~/styles/element/index.scss" as *;`,
+  //     },
+  //   },
+  // },
   plugins: [
     vue(),
     Components({

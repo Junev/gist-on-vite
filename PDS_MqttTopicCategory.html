@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>MQTT主题消息分类</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/icon/IOCommon/iconfont.css" />
+    <link rel="stylesheet" href="css/icon/IOFunction/iconfont.css" />
+    <link rel="stylesheet" href="css/mtree.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.linq.js"></script>
+    <script type="text/javascript" src="js/common.js"></script> 
+    <script>
+      if (!top.LogInfor.sid) {
+        top.LogInfor.sid = sessionStorage.getItem("sid")
+      }
+    </script>
+    <style>
+    </style>
+  </head>
+  <body>
+    <div id="mqttTopicCategory"></div>
+    <script type="module" src="/src/pages/pdsMqttTopicCategory/main.js"></script>
+  </body>
+</html>

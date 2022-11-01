@@ -1,6 +1,6 @@
 <template>
-  <el-config-provider namespace="ep">
-    <BaseHeader />
+  <el-config-provider namespace="el">
+   <BaseHeader />
     <div style="display: flex">
       <BaseSide />
       <div>

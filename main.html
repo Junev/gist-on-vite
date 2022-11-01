@@ -1,0 +1,747 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>制丝车间生产管理系统</title>
+    <link rel="stylesheet" type="text/css" href="indexcss/left-side-menu.css">
+    <link rel="stylesheet" type="text/css" href="indexfont/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <link type="text/css" href="css/index.css" rel="stylesheet" />
+    <link type="text/css" href="css/common.css" rel="stylesheet" />
+
+    <link type="text/css" href="css/main.css" rel="stylesheet" />
+    <link type="text/css" href="css/scrollbar.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/icon/common/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/icon/IONav/iconfont.css">
+    <link rel="stylesheet" href="element/elementUIV2.14.0/theme-chalk/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/ultree.css" />
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.linq.js"></script>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/myjs.js"></script>
+    <script type="text/javascript" src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="indexjs/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="element/elementUIV2.14.0/index.js"></script>
+
+    <script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+    <script type="text/javascript" src="js/ultree.js"></script>
+    <script type="text/javascript" src="js/tools/Sortable.min.js"></script>
+    <script type="text/javascript" src="js/axios/axios.js"></script>
+
+    <script>
+        $(document).ready(()=>{
+            var el = document.getElementById('myTab');
+            Sortable.create(el,{animation: 500});
+        }
+        )
+    </script>
+
+    <style>
+        .nav-tabs>li>a {
+            border: 1px solid #ccc;
+        }
+        .item {
+            margin-top: 0px;
+            margin-right: 10px;
+
+        }
+
+        .msg {
+            display: none;
+            position: absolute;
+            right: 12px;
+            bottom: 40px;
+            width: 500px;
+            /*height: 45%;*/
+            background-color: whitesmoke;
+            opacity: 0.9;
+            border: solid 2px #dae4f1;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+
+        .spanTitle {
+            border-radius: 10px;
+            padding: 1px 11px;
+            background: rgb(94, 134, 193);
+            border-color: rgb(94, 134, 193);
+            color: #FFFFFF;
+        }
+
+        .el-col {
+            margin-bottom: 0px !important;
+        }
+
+        .spanbadge {
+            display: inline-block;
+            min-width: 10px;
+            padding: 3px 7px;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1;
+            color: #fff;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+
+            border-radius: 10px;
+        }
+
+        .spanColor {
+            background-color: #409EFF;
+        }
+
+        .userColor {
+            color: #409EFF;
+        }
+
+        .messagelist {
+            background-color: #fff;
+            width: 99%;
+
+        }
+
+        .bt {
+            color: #F56C6C;
+            border: 0px;
+            background: #f6f6f6;
+        }
+
+        .bt:hover {
+            color: #FFF;
+            border: 1px;
+            background: #F56C6C;
+        }
+
+        .userInfoDialog {
+            margin: 0 auto;
+            text-align: center;
+            width: 200px;
+            height: 280px;
+        }
+
+        .userInfoBtn {
+            background: rgb(94, 134, 193);
+            border: 1px solid;
+            margin: 2px;
+            padding: 4px;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 180px;
+
+            font-family: Times New Roman;
+            border: solid #6597dd 1px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .changePwdlist {
+
+            display: none;
+            position: absolute;
+            left: 40%;
+            top: 30%;
+            width: 420px;
+            height: 400px;
+            opacity: 0.9;
+            background-color: white;
+            border: solid 2px #dae4f1;
+            border-radius: 8px;
+            overflow: hidden;
+
+        }
+
+        .circleBtn {
+            border-radius: 100%;
+            line-height: 0.5;
+            padding: 12px 12px;
+        }
+
+        .el-form-item__label {
+            text-align: center;
+            font-size: 15px;
+            color: black;
+        }
+
+        .el-input__inner {
+            height: 35px;
+        }
+
+        .el-button:focus,
+        .el-button:hover {
+            border: solid #337FED 1px;
+            color: #FFFFFF;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        .el-button {
+            font-family: Times New Roman;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 20px;
+
+        }
+
+        .el-button-mycss {
+            font-family: Times New Roman;
+            border: solid #6597dd 1px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .el-button.is-disabled {
+            border: #6597dd;
+        }
+
+        /* 消除el下拉框小下巴 */
+        .el-select-dropdown__wrap {
+            overflow: auto;
+        }
+
+        .el-textarea__inner {
+            width: 100%;
+        }
+
+        .el-form-item {
+            margin: 10px 10px;
+            width: 90%;
+            vertical-align: middle;
+        }
+
+        .el-form-item__label {
+            color: #2266af;
+        }
+
+        .el-form-item__error {
+            padding-top: 0px;
+        }
+
+        .el-progress-bar__outer {
+            background-color: #cfd1db;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 主页框架 -->
+    <div id="mainpage">
+        <div class="top"
+            style="background-color: #ffffff; border-bottom: 1px solid  rgba(160, 162, 167, 0.1);height: 55px;width: 100%;">
+            <div style="height:55px; width: 100%;">
+                <!-- 头部字 -->
+                <div class="topleft">
+                    <!-- <div style="float: left;margin-left: 0.8%;margin-top: 0.5%;">
+                        <img src="images/cc.png" style="width:68%;height:68%;" />
+                    </div> -->
+                    <div
+                        style="font-size: 20px; font-weight: 900; text-align:left; color:#000000; margin-left: 1%;margin-top:0.5%;letter-spacing: 1px;">
+                        宝鸡卷烟厂 | <span style="font-size: 16px;font-weight: 900;margin-left: 0.3%;">制丝车间生产管理系统</span>
+                    </div>
+                </div>
+                <!-- 头部用户登录信息 -->
+                <div class="topright" style="text-align: right; padding-top:0%;padding-right:1.3%;margin-top:0.5%">
+                    <div class="user" style="width:230px">
+                        <el-dropdown trigger="click">
+                            <span class="el-dropdown-link"
+                                @click="mainpage.getmsgs();mainpage.msgsNumber > 0 ? mainpage.hiddenbadge = false :mainpage.hiddenbadge = true;">
+                                <el-tooltip content="个人信息" placement="bottom" effect="light">
+                                    <el-badge value="new" class="badgeitem" v-bind:hidden="hiddenbadge">
+                                        <el-avatar class="userImageShort"
+                                            style=" background-color: rgb(94, 134, 193); color: #fff; padding-top: 6px;padding-left:10px">
+                                            姓</el-avatar>
+                                    </el-badge>
+                                </el-tooltip>
+                            </span>
+                            <el-dropdown-menu slot="dropdown">
+                                <div class="userInfoDialog">
+                                    <br />
+                                    <el-avatar class="userImage"
+                                        style="background-color: rgb(94, 134, 193);color: #fff; width: 100px; height: 100px; padding-top: 30px; font-size: 40px;">
+                                        user</el-avatar><br>
+                                    <span class="userInfoName" style="font-size: 20px;">userName</span><br><br>
+                                    <el-badge value="new" class="badgeitem" v-bind:hidden="hiddenbadge">
+                                        <button class="userInfoBtn el-button-mycss" id="showMessageBtn"
+                                            @click="Openmsglist()">消息</button>
+                                    </el-badge><br />
+                                    <button class="userInfoBtn el-button-mycss" id="changePwdBtn"
+                                        @click="OpenChangepwdlist();">修改密码</button><br />
+                                    <button class="userInfoBtn el-button-mycss" id="logout" @click="">注销</button>
+                                </div>
+                            </el-dropdown-menu>
+                        </el-dropdown>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="left-side-menu">
+            <div class="lsm-expand-btn">
+                <div id="mini" style="border-bottom:1px solid rgb(238, 233, 233);">
+                    <i class="el-icon-s-unfold" style="font-size: 30px;margin-left: 10px;color: #345b97;"
+                        title="主菜单"></i>
+                </div>
+            </div>
+            <div class="lsm-container">
+                <div class="lsm-scroll">
+                    <div class="lsm-sidebar menus">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <section id="main">
+            <div style="background-color: #ffffff;height: 32px;width: 100%;border: none;width: 100%;">
+                <ul id="myTab" class="nav nav-tabs" role="navigation">
+                    <li class="active" id="ll">
+                        <a href="#home" data-toggle="tab" style="height: 30px;width: 100%;padding-top: 5px;" class="add"
+                            id="M01M01">系统首页</a>
+                    </li>
+                </ul>
+                <div style="position:absolute;right:10px;top:1px;z-index:100;">
+                    <el-button type="danger" plain size="mini" icon="el-icon-close" id="colBut"
+                        style="font-size: 12px;margin-left: 5px;">关闭全部</el-button>
+                </div>
+            </div>
+            <div id="con" class="tab-content">
+                <div class="tab-pane fade in active" id="home"
+                    style="height: 100%;width: 100%;background-color: #f3f4fa;overflow: hidden;">
+                    <iframe
+                        style="height:100%;width:100%;border:1px solid rgba(122, 123, 124, 0.1);box-shadow: -3px 0 5px -1px rgba(113, 117, 121, 0.1),3px 0 5px -1px rgba(113, 117, 121, 0.1);background-color: #ffffff;"
+                        id="main_frame" src="first.html"></iframe>
+                </div>
+            </div>
+
+        </section>
+        <!-- 主界面底部字 -->
+        <footer class="bottom">
+            <span style="color: #052a6d;">
+                欢迎登录制丝车间生产管理系统
+                &nbsp;&nbsp;&nbsp;&nbsp;Copyright © 2022 ksec.com.cn
+            </span>
+        </footer>
+        <div style="text-align:center;clear:both;">
+        </div>
+    </div>
+    <!-- 遮罩层 -->
+    <div id="loadingDiv"
+        style="z-index: 2800;position:fixed;display:none;z-index:2000;top:0px;left:0px;width:100%;height:100%;background-color:rgb(114 108 108 / 0.70)">
+    </div>
+    <!-- 更改密码浮窗 -->
+    <div id="changePwdIframe" class="changePwdlist" style="z-index: 3000;">
+        <div style="width: 400px; font-size: 24px; padding-top: 10px; padding-left: 20px;">
+            <table>
+                <tr>
+                    <td style="width:99.9%">
+                        <span style="font-size:28px;color: #37486A">更改密码</span>
+                    </td>
+                    <td style="width:0.1%;margin:auto;">
+                        <span>
+                            <el-button class="circleBtn"
+                                onclick="$('#changePwdIframe').fadeOut(); setTimeout(() => { $('#loadingDiv').css('display', 'none'); }, 300); mainpage.showchangepwddialog = true;"
+                                style="font-size:22px;background-color:white;border:0px;">×</el-button>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr style="margin-top:10px;margin-bottom: 40px;" />
+        <div style="width: 500px; padding-left: 25px; padding-right: 60px;">
+            <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px"
+                class="demo-ruleForm">
+                <el-form-item label="原 密 码" prop="oldPass">
+                    <el-input type="password" v-model="ruleForm.oldPass" autocomplete="off" style="width:200px;">
+                    </el-input>
+                </el-form-item>
+                <el-form-item label="新 密 码" prop="newPass">
+                    <el-input type="password" v-model="ruleForm.newPass" autocomplete="off" style="width: 200px;">
+                    </el-input>
+                </el-form-item>
+                <el-form-item label="密码强度">
+                    <el-progress :text-inside="true" :stroke-width="18" :percentage="nowStrength"
+                        :color="customColorMethod" style="width:200px;margin-top: 10px;"></el-progress>
+                </el-form-item>
+                <el-form-item label="确认密码" prop="reNewPass">
+                    <el-input type="password" v-model="ruleForm.reNewPass" autocomplete="off" style="width: 200px;">
+                    </el-input>
+                </el-form-item>
+                <el-form-item style="float: right; padding-right: 17%;">
+                    <el-button type="primary" @click="submitForm('ruleForm')" :plain="true">确认更改</el-button>
+                </el-form-item>
+            </el-form>
+        </div>
+    </div>
+    <!--消息部分-->
+    <div id="msglist">
+        <el-drawer v-cloak wrapperClosable="false" title="" :visible.sync="drawer" :direction="direction"
+            :before-close="handleClose" :close-on-click-modal="false">
+            <div style="margin:20px;">
+                <div style="font-weight: 600; font-size: 18px; color: rgb(27, 53, 86);margin:-5px -5px">
+                    <span class="spanTitle">{{pageTitle}}</span>
+                </div>
+                <!-- 消息按钮导航栏 -->
+                <div style="width:519px;margin-top: 35px;">
+                    <el-button-group>
+                        <el-button class="el-button-mycss" size="small" title="查看新消息"
+                            @click="getmymsgs();msglist.msgdivheight='760px';"
+                            style="width: 130px;background: rgb(94, 134, 193);color: #FFFFFF;">新消息</el-button>
+                        <el-button class="el-button-mycss" size="small" title="新建一条消息" @click="showcreatemsg(null);"
+                            style="width: 130px;background: rgb(94, 134, 193);color: #FFFFFF;">新建消息</el-button>
+                        <el-button class="el-button-mycss" size="small" title="查看我的待发送消息" @click="getweitmesgs();"
+                            style="width: 130px;background: rgb(94, 134, 193);color: #FFFFFF;">待发消息</el-button>
+                        <el-button class="el-button-mycss" size="small" title="我的历史消息查询"
+                            @click="gethismessages();msglist.msgdivheight='425px'; "
+                            style="width: 130px;background: rgb(94, 134, 193);color: #FFFFFF;">历史消息</el-button>
+                    </el-button-group>
+                </div>
+                <!--未读信息-->
+                <div v-if="!istoreveived"
+                    style="overflow:auto;border-color:#efe8e8; border: 1px solid #81abd3; border-radius: 8px; margin-top: 10px;"
+                    v-bind:style="{height: msgdivheight}">
+                    <div v-for="msg in msgs" class="messagelist" style="margin-left:8px;width:520px">
+                        <div style="width:100%;padding-top: 3px;">
+                            <a href="#" v-bind:class="[msg.ISREVEIVED?'text-secondary':'blink']"
+                                @click="showcreatemsg(msg.RUID);" style="font-size:1.1em"
+                                title="显示详细信息">{{msg.MESSAGETITLE}}</a>
+                            <span v-if="msg.LEVELID==1" class="el-icon-warning" style="cursor:default;color:#f91414"
+                                title="请优先处理"></span>
+                            <el-button v-if="battenSure===1"
+                                style="border: rgb(40, 156, 91);background: rgb(40, 156, 91);color: #FFFFFF;float:right;margin-top:5px;margin-right:5px"
+                                size="small"
+                                @click="SetReveived(msg.RUID, msg.USER_ID);mainpage.msgsNumber === 0 ? mainpage.hiddenbadge = true : '';">
+                                标记为已读</el-button>
+                        </div>
+                        <div style="width:100%">
+                            <span style="margin-left:7px">发送人：{{msg.SENDUSERNAME}}</span>
+                            <span style="float:right;margin-right:5px" title="信息发送时间">{{msg.CREATEDATE}}</span>
+                        </div>
+                    </div>
+                    <div v-if="!istoreveived" class="btn-group " style=" position: absolute; bottom: 2%;right:5%">
+                        <el-button style="border:rgb(40, 156, 91);background: rgb(40, 156, 91);color: #FFFFFF;" plain
+                            size="small" title="标记已读后，不再显示列表的所有信息"
+                            @click="SetReveivedAll();mainpage.hiddenbadge = true;">全部已读</el-button>
+                    </div>
+                </div>
+                <!--待发信息-->
+                <div v-if="istosend"
+                    style="overflow:auto;border-color:#efe8e8; border: 1px solid #81abd3; border-radius: 8px; margin-top: 10px;height: 760px;">
+                    <!-- <h5><span class="spanTitle">{{pageTitle}}</span></h5> -->
+                    <div v-for="msga in mymsgs" class="messagelist" style="margin-left:8px;width:520px">
+                        <div style="width:100%;padding-top: 3px;">
+                            <a href="#" class="blink" @click="showcreatemsg(msga.RUID);" style="font-size:1.1em"
+                                title="显示详细信息">{{msga.MESSAGETITLE}}</a>
+                            <span v-if="msga.LEVELID==1" class="el-icon-warning" style="cursor:default;color:#f91414"
+                                title="请优先处理"></span>
+                        </div>
+                        <div style="width:100%;margin-right:5px;">
+                            <span style="margin-left:7px">写件人：{{msga.AUTHOR}}</span>
+                            <span style="float:right;margin-right:5px" title="信息发送时间">{{msga.CREATEDATE}}</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 历史消息 -->
+                <div v-if="ishis"
+                    style="overflow:auto;border-color:#efe8e8; border: 1px solid #81abd3; border-radius: 8px; margin-top: 10px;"
+                    v-bind:style="{height: msgdivheight}">
+                    <div v-for="msg in msgs" class="messagelist" style="margin-left:8px;width:520px">
+                        <div style="width:100%;padding-top: 3px;">
+                            <a href="#" v-bind:class="[msg.ISREVEIVED?'text-secondary':'blink']"
+                                @click="showcreatemsg(msg.RUID);" style="font-size:1.1em"
+                                title="显示详细信息">{{msg.MESSAGETITLE}}</a>
+                            <span v-if="msg.LEVELID==1" class="el-icon-warning" style="cursor:default;color:#f91414"
+                                title="请优先处理"></span>
+                        </div>
+                        <div style="width:100%">
+                            <span style="margin-left:7px">发送人：{{msg.SENDUSERNAME}}</span>
+                            <span style="float:right;margin-right:5px" title="信息发送时间">{{msg.CREATEDATE}}</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 历史消息查询条件 -->
+                <div id="HisMsg" v-bind:style="{display: displayData}">
+                    <div style="border:solid 1px #81abd3;width:100%;margin-top:10px;border-radius:8px">
+                        <el-row>
+                            <div style="margin-bottom: 10px;margin-left: 10px;margin-top: 13px;">
+                                <h5><span class="spanTitle">我的历史消息查询</span></h5>
+                            </div>
+                            <div class="inputDiv w-100">
+                                <div class="labelDiv"
+                                    style="height: 35px;padding-left: 10px;width: 20%;padding-left: 3%;width: 18%;margin-left: 20px;">
+                                    时间范围</div>
+                                <el-date-picker v-model="hisTime" type="datetimerange" align="right" style="width:68%"
+                                    @change="Timepick" start-placeholder="开始日期" end-placeholder="结束日期"
+                                    :default-time="['00:00:00', '00:00:00']">
+                                </el-date-picker>
+                            </div>
+                            <div class="inputDiv w-100">
+                                <div class="labelDiv"
+                                    style="height:35px;padding-left: 3%;width: 18%;margin-left: 20px;">消息标题</div>
+                                <el-input class="floatl " style="width:50%" v-model="MessageTitle" placeholder="请输入内容"
+                                    clearable>
+                                </el-input>
+                            </div>
+                            <div class="inputDiv w-100">
+                                <div class="labelDiv"
+                                    style="height:35px;padding-left: 3%;width: 18%;margin-left: 20px;">
+                                    消息类型</div>
+                                <el-select v-model="selTypeID" clearable="true" placeholder="请选择">
+                                    <el-option v-for="item in Types" :key="item.ENUMVALUE" :label="item.ENUMSTRING"
+                                        :value="item.ENUMVALUE">
+                                    </el-option>
+                                </el-select>
+                            </div>
+                            <div class="inputDiv w-100">
+                                <div class="labelDiv"
+                                    style="height:35px;padding-left: 3%;width: 18%;margin-left: 20px;">
+                                    重要程度</div>
+                                <el-select v-model="selLevelID" clearable="true" placeholder="请选择">
+                                    <el-option v-for="item in Levels" :key="item.ENUMVALUE" :label="item.ENUMSTRING"
+                                        :value="item.ENUMVALUE">
+                                    </el-option>
+                                </el-select>
+                            </div>
+                            <div class="inputDiv w-100">
+                                <div class="labelDiv"
+                                    style="height:35px;padding-left: 3%;width: 18%;margin-left: 20px;">
+                                    确认消息</div>
+                                <el-select v-model="selMsgTypeID" clearable="true" placeholder="请选择">
+                                    <el-option v-for="item in msgtype" :key="item.ENUMVALUE" :label="item.ENUMSTRING"
+                                        :value="item.ENUMVALUE">
+                                    </el-option>
+                                </el-select>
+                            </div>
+
+                        </el-row>
+                        <el-row>
+                            <div class="inputDiv w-95">
+                                <el-button class="el-button-mycss"
+                                    style="float:right;margin-right:5px;margin-bottom: 10px;background: rgb(94, 134, 193);color: #FFFFFF;"
+                                    title="查询历史消息" @click="FindMessage">查 询</el-button>
+                            </div>
+                        </el-row>
+                    </div>
+                </div>
+                <!-- 新建消息 -->
+                <div v-if="iscreatemsg" class="messagelist"
+                    style="margin-left:5px;width:530px;margin-top:10px;margin-right:5px;background-color:white;border:solid 1px #81abd3;border-radius:8px;">
+                    <el-form class=" w-100 ">
+                        <el-row>
+                            <div style="width:100%">
+                                <div style="float:left;padding-left: 12px;padding-top: 2px;">
+                                    <h4 style="font-size: 22px;">消息详细内容</h4>
+                                </div>
+                                <el-button-group style="float:right;padding-right: 10px;padding-top: 8px;">
+                                    <el-button
+                                        style="height: 30px;background: rgb(82, 173, 123);border: rgb(82, 173, 123);color: #FFFFFF;"
+                                        size="small" icon="el-icon-success" v-if="msgFormmsg.MESSAGESTATUS == 0"
+                                        @click="savemsg(true)"
+                                        v-bind:disabled="msgFormmsg.MESSAGETITLE.trim()=='' || !Receivers">保存并发送
+                                    </el-button>
+                                    <el-button
+                                        style="height: 30px;background: rgb(51,142,92);color: #FFFFFF;border: rgb(51,142,92);"
+                                        size="small" icon="el-icon-check" v-if="msgFormmsg.MESSAGESTATUS == 0"
+                                        v-bind:disabled="msgFormmsg.MESSAGETITLE.trim()==''" @click="savemsg(false)">
+                                        保存待发</el-button>
+                                    <el-button style="height: 30px;background: #b42828;color: #FFFFFF;border: #b42828;"
+                                        size="small" icon="el-icon-delete"
+                                        v-if="msgFormmsg.MESSAGESTATUS == 0 && msgFormmsg.RUID!=null && msgFormmsg.AUTHOR && msgFormmsg.AUTHOR==top.LogInfor.UserID"
+                                        @click="deletemsg">删除消息</el-button>
+                                    <el-button
+                                        style="height: 30px;background: rgb(94, 134, 193);color: #FFFFFF;border: rgb(94, 134, 193);"
+                                        size="small" icon="el-icon-plus" v-if="msgFormmsg.MESSAGESTATUS == 1 "
+                                        @click="resendmsg">转发</el-button>
+                                </el-button-group>
+                            </div>
+                        </el-row>
+                        <el-row>
+                            <div style="width:98%;">
+                                <div class="inputDiv w-100">
+                                    <div class="labelDiv" style="height:35px;padding-left: 4%;">消息标题</div>
+                                    <el-input class="floatl" style="width:75%" v-model="msgFormmsg.MESSAGETITLE"
+                                        placeholder="请输入内容" v-bind:disabled="msgFormmsg.MESSAGESTATUS!=0" clearable>
+                                    </el-input>
+                                </div>
+                            </div>
+                        </el-row>
+                        <el-row>
+                            <el-col :span="12">
+                                <div class="inputDiv w-100">
+                                    <div class="labelDiv" style="height:35px;width:30%;padding-left: 3.5%;">消息类型</div>
+                                    <el-select v-model="msgFormmsg.MESSAGETYPE" style="width:65%;" placeholder="请选择"
+                                        v-bind:disabled="msgFormmsg.MESSAGESTATUS!=0">
+                                        <el-option v-for="item in msgFormTypes" :key="item.ENUMVALUE"
+                                            :label="item.ENUMSTRING" :value="item.ENUMVALUE">
+                                        </el-option>
+                                    </el-select>
+                                </div>
+                            </el-col>
+                            <el-col :span="12">
+                                <div class="inputDiv w-100">
+                                    <div class="labelDiv"
+                                        style="height:35px;width:30%;margin-left: 5px;padding-left: 3.5%;">重要程度</div>
+                                    <el-select v-model="msgFormmsg.MESSAGELEVEL" style="width:55%;margin-right:25px"
+                                        placeholder="请选择" v-bind:disabled="msgFormmsg.MESSAGESTATUS!=0">
+                                        <el-option v-for="item in msgFormLevels" :key="item.ENUMVALUE"
+                                            :label="item.ENUMSTRING" :value="item.ENUMVALUE">
+                                        </el-option>
+                                    </el-select>
+                                </div>
+                            </el-col>
+                        </el-row>
+                        <div style="width:100%">
+                            <h5 style="float:left;padding-left: 10px;">
+                                <span class="spanbadge spanColor"
+                                    style="padding-left: 5px;background: rgb(94, 134, 193);color: #FFFFFF;">消息详细内容:</span>
+                                <span :class="msgtypecss"
+                                    style="padding-left: 5px;background: rgb(71, 106, 160);color: #FFFFFF;">{{MessageConfrom}}</span>
+                                <span class="spanbadge spanColor"
+                                    style="padding-left: 5px;background: rgb(94, 134, 193);color: #FFFFFF;">确认人:{{msgFormmsg.CONFROMUSER | UserName}}</span>
+                            </h5>
+                            <div v-show="comfromMsg" style="width:45%;float:right">
+                                <div class="inputDiv w-100">
+                                    <div class="labelDiv" style="height:40px;width:30%"> 确认消息:</div>
+                                    <el-select v-model="msgFormmsg.MESSAGECONFROM" @change="msgtypeChenge()"
+                                        style="width:65%" placeholder="请选择">
+                                        <el-option v-for="item in msgFormmsgtype" :key="item.ENUMVALUE"
+                                            :label="item.ENUMSTRING" :value="item.ENUMVALUE">
+                                        </el-option>
+                                    </el-select>
+                                </div>
+                            </div>
+                        </div>
+                        <el-input type="textarea" :rows="16" v-bind:disabled="msgFormmsg.MESSAGESTATUS!=0"
+                            placeholder="请输入内容" v-model="msgFormmsg.MESSAGECONTENT"
+                            style="margin-left: 5px;margin-right: 5px;width: 515px;">
+                        </el-input>
+                        <el-row>
+                            <!--附件和人员-->
+                            <el-col :span="16">
+                                <!--掩藏的文档选取控件-->
+                                <input type="file" id="UpLoadFile" style="display:none;" @change="newAttachment"
+                                    accept=".*">
+                                <div style="width:100%;display:flex;padding-left: 10px;">
+                                    <div style="float:left">
+                                        <h5><span class="spanbadge spanColor"
+                                                style="background: rgb(94, 134, 193);color: #FFFFFF;">消息附件列表</span></h5>
+                                    </div>
+                                    <div style="float:left;font-size:14px;padding-left: 5px;">
+                                        <el-button
+                                            style="font-size: 10px;margin:8px 5px;padding:5px 5px;background: rgb(82, 173, 123);border: rgb(82, 173, 123) 1px solid;color: #ffffff;width: 45px;"
+                                            v-if="msgFormmsg.MESSAGESTATUS==0" v-on:click="$('#UpLoadFile').click();">添加
+                                        </el-button>
+                                    </div>
+                                </div>
+                                <div
+                                    style="height:150px;margin-left: 5px;margin-right: 10px;border-radius: 4px;border: 1px solid #B4C6EA;overflow:auto;">
+                                    <div v-for="atx in Attachments" style="display:flex;">
+                                        <div class="text-primary" style="float:left;width:75%">{{atx | FileTitle}}</div>
+                                        <button style="float:right" type='button' class='btn  btn-sm '
+                                            v-if="msgFormmsg.MESSAGESTATUS !=0" title="下载该附件"
+                                            @click="if(atx && atx.indexOf('@@')>=0) DownLoadFile(atx.substring(0,atx.lastIndexOf('@@')).replace('@@','/'),atx.substring(atx.lastIndexOf('@@')>=0?atx.lastIndexOf('@@')+2:0));">下载</button>
+                                        <button style="float:right;color:#F56C6C" type='button'
+                                            v-if="msgFormmsg.MESSAGESTATUS==0" class='btn  btn-sm ' title="移除该附件"
+                                            @click="removefile(atx)">移除</button>
+
+                                    </div>
+                                </div>
+                            </el-col>
+                            <el-col :span="8">
+                                <div style="width:100%;display:flex;margin-left:5px">
+                                    <div style="float:left">
+                                        <h5><span class="spanbadge spanColor"
+                                                style="background: rgb(94, 134, 193);color: #FFFFFF;">消息接收人员</span></h5>
+                                    </div>
+                                    <div style="float:left;font-size:14px;padding-left: 5px; ">
+                                        <el-button
+                                            style="font-size: 10px;margin:8px 5px;padding:5px 5px;background: rgb(82, 173, 123);border: rgb(82, 173, 123) 1px solid;color: #ffffff;width: 45px;"
+                                            v-if="msgFormmsg.MESSAGESTATUS==0||msgFormmsg.MESSAGESTATUS==2"
+                                            @click="addUser()">添加</el-button>
+                                    </div>
+                                </div>
+                                <div
+                                    style="height:150px;overflow:auto;margin-left:5px;margin-right: 8px;border-radius: 4px;border: 1px solid #B4C6EA;">
+                                    <div v-for="rvx in Receivers" style="display:flex;">
+                                        <div style="float:left;width:75%;margin-left:5px"
+                                            v-bind:class="[rvx.ISREVEIVED==0?'userColor':'']">
+                                            {{rvx.USER_NAME|rvx.USER_ID}}
+                                        </div>
+
+                                        <button type='button' v-if="msgFormmsg.MESSAGESTATUS==0"
+                                            style="float:right;color:#F56C6C" class='btn btn-sm ' title="移除该接收人员"
+                                            @click="removeReceiver(rvx)">移除</button>
+                                    </div>
+                                </div>
+                            </el-col>
+                        </el-row>
+                        <el-row>
+                            <el-col :span="12">
+                                <div class="input-group" style="margin:5px ">
+                                    <div class="input-group-prepend" style="float:left;margin:5px ">
+                                        <span class="input-group-text">消息来源:</span>
+                                    </div>
+                                    <input style="float:left;width:70%" type="text"
+                                        class="form-control font-weight-bold" v-bind:value="sendname" readonly>
+                                </div>
+                            </el-col>
+                            <el-col :span="12">
+                                <div class="input-group " style="margin:5px ">
+                                    <div class="input-group-prepend" style="float:left;margin:5px ">
+                                        <span class="input-group-text">发送时间:</span>
+                                    </div>
+                                    <input style="float:left;width:70%" type="text"
+                                        class="form-control font-weight-bold" v-bind:value="msgFormmsg.CREATEDATE"
+                                        readonly>
+                                </div>
+                            </el-col>
+                        </el-row>
+                    </el-form>
+                </div>
+                <!-- 选择收件人 -->
+                <div v-if="isselectuser" class="messagelist"
+                    style="margin-left:5px;width:530px;margin-top:10px;padding-left: 10px;margin-right:5px;background-color:white;border:solid 1px #81abd3;border-radius:8px;height: 760px;">
+                    <div style="width:100%;padding-top: 5px;padding-right: 10px;">
+                        <div style="float:left;padding-left: 5px;">
+                            <h4 style="font-size: 26px;">消息接收人员选取</h4>
+                        </div>
+                        <el-button-group style="float:right;padding-top: 5px;">
+                            <el-button type="success" size="small" icon="el-icon-success" @click="confirmcheck()">确 定
+                            </el-button>
+                            <el-button type='info' size="small" icon='el-icon-d-arrow-left' @click="hide();">返 回
+                            </el-button>
+                        </el-button-group>
+                    </div><br><br><br>
+                    <hr style="margin-top: 5px;margin-right: 10px;">
+                    <div style="overflow:auto;height: 670px;padding-right: -10px;">
+                        <el-tree :data="Usertypeoptions" node-key="id" show-checkbox :default-expanded-keys="expendNode"
+                            @check="treecheck" ref="equtree" highlight-current :props="treeprops"
+                            style="overflow-y: scroll;width: 100%;height:98%;">
+                            <span slot-scope="{ node, data }">
+                                {{ node.label }}
+                            </span>
+                        </el-tree>
+                    </div>
+                </div>
+
+            </div>
+        </el-drawer>
+    </div>
+    <script type="text/javascript" src="js/MainMyMessage.js"></script>
+</body>
+
+
+</html>

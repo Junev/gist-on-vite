@@ -10,6 +10,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.0.10",
     "element-plus": "^2.2.13",
     "vue": "^3.2.36"
   },
@@ -23,7 +24,7 @@
     "unplugin-vue-components": "^0.19.5",
     "vite": "^2.9.9",
     "vite-ssg": "^0.20.0",
-    "vue-tsc": "^0.34.16"
+    "vue-tsc": "^1.0.9"
   },
   "license": "MIT"
 }
