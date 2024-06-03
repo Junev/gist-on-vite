@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/excel/xlsx.core.min.js"></script>
+  <script src="js/excel/xlsxStyle.core.min.js"></script>
+  <!-- <script src="js/excel/xlsxStyle.utils.js"></script> -->
+  <!-- <script src="js/excel/xlsx.extendscript.js"></script> -->
+  <script src="js/excel/FileSaver.js"></script>
+  <script src="js/excel/Export2Excel.js"></script>
+</head>
+<body>
+  <table>
+    <tr><td colspan="2">111</td></tr>
+    <tr><td>2</td><td>3</td></tr>
+  </table>
+  <script>
+    const tableDom = document.querySelector("table");
+    const worksheet = XLSX.utils.table_to_sheet(tableDom);
+    let workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Sheet1");
+    worksheet["!freeze"] =  {
+      state: "frozen",
+      xSplit: 1,
+      ySplit: 1,
+      topLeftCell: "B2",
+      activePane: "bottomRight",
+    }
+
+    // XSU.setColWidth(
+    //   workbook,
+    //   "Sheet1",
+    //   [{ wch: 10 }, { wch: 10 }, { wch: 20 }, { wch: 20 }].concat(
+    //     new Array(XSU.getMaxCol(workbook, "Sheet1")).fill({ wch: 10 })
+    //   )
+    // );
+
+    // XSU.setAlignmentStylesAll(workbook, "Sheet1", { vertical: "center", horizontal: "center", wrapText: true });
+    const wbout = xlsxStyle.write(workbook, { bookType: "xlsx", bookSST: false, type: "binary" });
+    saveAs(
+      new Blob([s2ab(wbout)], { type: "application/octet-stream" }),
+      `利群报表.xlsx`)
+  </script>
+</body>
+</html>
