@@ -1,0 +1,221 @@
+.menus,.menus * {
+	font-family: 'Open Sans',sans-serif;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	outline: 0
+}
+
+.menus {
+	min-width: 260px;
+	float: left;
+	position: relative;
+	box-shadow: 0 20px 50px #333
+}
+
+.menus .menus-footer,.menus .menus-header {
+	width: 100%;
+	height: 15px;
+	padding-left: 85%;
+	float: right;
+	line-height: 15px;
+	font-weight: 600;
+	color: #f0f0f0;
+	background: #414956
+}
+
+.menus ul {
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+
+.menus ul li {
+	width: 100%;
+	display: block;
+	float: left;
+	position: relative
+}
+
+.menus ul li a {
+	width: 100%;
+	padding: 14px 22px;
+	float: left;
+	text-decoration: none;
+	color: #f0f0f0;
+	font-size: 15px;
+	background: #414956;
+	position: relative;
+	overflow: hidden;
+	-o-transition: color .2s linear,background .2s linear;
+	-moz-transition: color .2s linear,background .2s linear;
+	-webkit-transition: color .2s linear,background .2s linear;
+	transition: color .2s linear,background .2s linear
+}
+
+.menus>ul>li.active>a,.menus>ul>li:hover>a {
+	color: #fff;
+	background: #3b424d
+}
+
+.menus>ul>li>a {
+	border-bottom: solid 1px #3b424d
+}
+
+.menus ul li a i {
+	width: 34px;
+	float: left;
+	line-height: 18px;
+	font-size: 16px;
+	text-align: left
+}
+
+.menus .submenu-indicator {
+	float: right;
+	right: 22px;
+	position: absolute;
+	line-height: 19px;
+	font-size: 20px;
+	-o-transition: transform .3s linear;
+	-moz-transition: transform .3s linear;
+	-webkit-transition: transform .3s linear;
+	-ms-transition: transform .3s linear
+}
+
+.menus ul ul.submenu .submenu-indicator {
+	line-height: 16px
+}
+
+.menus .submenu-indicator-minus>.submenu-indicator {
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg)/*下拉菜单时右侧加号图标旋转45度变叉叉*/
+}
+
+.menus ul ul.submenu,.menus ul ul.submenu li ul.submenu {
+	width: 100%;
+	display: none;
+	position: static
+}
+
+.menus ul ul.submenu li {
+	clear: both;
+	width: 100%
+}
+
+.menus ul ul.submenu li a {
+	width: 100%;
+	float: left;
+	font-size: 13px;
+	background: #22282f;/*5F9EA0   二级菜单背景;09280a绿色22282f灰色*/
+	border-top: none;
+	position: relative;
+	border-left: solid 6px transparent;
+	-o-transition: border .2s linear;
+	-moz-transition: border .2s linear;
+	-webkit-transition: border .2s linear;
+	transition: border .2s linear
+}
+
+.menus ul ul.submenu li:hover>a {
+	border-left-color: #414956
+}
+
+.menus ul ul.submenu>li>a {
+	padding-left: 30px
+}
+
+.menus ul ul.submenu>li>ul.submenu>li>a {
+	padding-left: 45px
+}
+
+.menus ul ul.submenu>li>ul.submenu>li>ul.submenu>li>a {
+	padding-left: 60px
+}
+
+.menus ul li .menus-label,.menus ul ul.submenu li .menus-label {
+	min-width: 20px;
+	padding: 1px 2px 1px 1px;
+	position: absolute;
+	right: 18px;
+	top: 14px;
+	font-size: 11px;
+	font-weight: 800;
+	color: #555;
+	text-align: center;
+	line-height: 18px;
+	background: #f0f0f0;
+	border-radius: 100%
+}
+
+.menus ul ul.submenu li .menus-label {
+	top: 12px
+}
+
+.ink {
+	display: block;
+	position: absolute;
+	background: rgba(255,255,255,.3);
+	border-radius: 100%;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	-o-transform: scale(0);
+	transform: scale(0)
+}
+
+.animate-ink {
+	-webkit-animation: ripple .5s linear;
+	-moz-animation: ripple .5s linear;
+	-ms-animation: ripple .5s linear;
+	-o-animation: ripple .5s linear;
+	animation: ripple .5s linear
+}
+
+@-webkit-keyframes ripple {
+	100% {
+		opacity: 0;
+		-webkit-transform: scale(2.5)
+	}
+}
+
+@-moz-keyframes ripple {
+	100% {
+		opacity: 0;
+		-moz-transform: scale(2.5)
+	}
+}
+
+@-o-keyframes ripple {
+	100% {
+		opacity: 0;
+		-o-transform: scale(2.5)
+	}
+}
+
+@keyframes ripple {
+	100% {
+		opacity: 0;
+		transform: scale(2.5)
+	}
+}
+
+
+
+.red.menus .menus-footer,.red.menus .menus-header,.red.menus ul li a {
+	background: #414956;/*一级菜单背景色蓝色版4682B4黄绿色版557d3a   496381*/
+}
+
+.red.menus>ul>li.active>a,.red.menus>ul>li:hover>a {
+	background: #09280a;/*2F4F4F*/
+}
+
+.red.menus>ul>li>a {
+	border-bottom-color: #09280a;/*09280a极深的墨绿（黄绿色版）；2F4F4F深墨蓝，蓝色版菜单背景色*/
+}
+
+.red.menus ul ul.submenu li:hover>a {
+	border-left-color: #cbdcf8/*#AFEEEE高亮蓝色，c3e16a高亮黄绿色，选中条侧边细条颜色*/
+}
+

@@ -1,0 +1,233 @@
+﻿.itext-hong{color:#b90b1c}
+.itext-hongh{color:#ff4646}
+
+.itext-huang{color:#ffc107}
+.itext-huangh{color:#fce73b}
+
+.itext-lan{color:#008792}
+.itext-lanh{color:#50cfd9}
+.itext-tianlan{color:#17a2b8}
+
+.itext-lv{color:#1d953f}
+.itext-lvh{color:#92f148}
+
+.itext-cheng{color:#f58220}
+.itext-chengh{color:#fc8520}
+
+.itext-zi{color:#bc5cfe}
+.itext-zih{color:#be8dfc}
+
+.itext-hui{color:#6c757d}
+
+.itext-shenhui{color:#343a40}
+.itext-qianhui{color:#f8f9fa}
+
+.ibackground-tlv{background-color:#b3db3d}
+
+.ibackground-flv{background-color:#bed742}
+.ibackground-wlv{background-color:#dcf177}
+.ibackground-hui{background-color:rgba(9, 9, 9, 0.59)}
+
+
+
+
+.ibg-hongdan{
+    background-color:#fae6d1;
+}
+
+.ibg-huilvdan{
+    background-color:#7e989a;
+    color:#ffffff;
+}
+
+.ibg-lanshen{
+    
+    background-color:#055c97;
+    color:#ffffff;
+}
+
+.ibg-lanshen2{
+    
+    background-color:#215967;
+    color:#ffffff;
+}
+
+.ibg-hongshen{
+    
+    background-color:#920f0f;
+    color:#ffffff;
+}
+
+.ibg-lvshen{
+    
+    background-color:#298042;
+    color:#ffffff;
+}
+
+.ibg-huishen{
+    
+    background-color:#353232;
+    color:#ffffff;
+}
+
+.ibg-qingshen{
+    
+    background-color:#046e76;
+    color:#ffffff;
+}
+
+.ibg-lanh2{
+    
+    background-color:#92cddc;
+}
+
+.ibg-lvh{
+    
+    background-color:#729636;
+    color:#ffffff;
+}
+
+.ibg-lv{
+    
+    background-color:#28a745;
+    color:#ffffff;
+}
+
+
+
+/* 定义keyframe动画，命名为blink */
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 0.7;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+            /* 注意这里定义50.01%立刻透明度为０，可以设置闪烁效果 */
+            75% {
+                opacity: 0.7;
+            }
+            100% {
+                opacity: 1;
+            }
+            
+        }
+        
+        @keyframes blinkfast {
+            0% {
+                opacity: 1;
+            }
+            25% {
+                opacity: 0.5;
+            }    
+            50% {
+                opacity: 1;
+            }  
+            75% {
+                opacity: 1;
+            }   
+            100% {
+                opacity: 0.5;
+            }         
+        }
+        /* 添加兼容性前缀 */
+
+        @-webkit-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            50.01% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @-moz-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            50.01% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @-ms-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            50.01% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @-o-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            50.01% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* 定义blink类*/
+        .blink {
+            animation: blink 1s linear infinite;
+            /* 其它浏览器兼容性前缀 */
+            -webkit-animation: blink 1s linear infinite;
+            -moz-animation: blink 1s linear infinite;
+            -ms-animation: blink 1s linear infinite;
+            -o-animation: blink 1s linear infinite;
+            /*color: #dd4814;*/
+        }
+        /* 定义blink类*/
+        .blinkfast {
+            animation: blinkfast 1s linear infinite;
+            /* 其它浏览器兼容性前缀 */
+            -webkit-animation: blinkfast 1s linear infinite;
+            -moz-animation: blinkfast 1s linear infinite;
+            -ms-animation: blinkfast 1s linear infinite;
+            -o-animation: blinkfast 1s linear infinite;
+            /*color: #dd4814;*/
+        }
+

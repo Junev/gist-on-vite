@@ -1,0 +1,76 @@
+﻿html{
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+}
+
+table thead{ 
+    text-align:center;
+}
+
+.tags_td{
+    background-color:#793030;
+    font-size:15px;
+    font-weight:800;
+}
+
+
+.datas_tr3{
+    background-color:#338747;
+    color:#fff;
+}
+
+.titleText{
+    color:#063555;
+    font-weight:800;
+    font-size:18px;
+}
+.InputText{
+    color:#312d98;
+    font-weight:800;
+    font-size:18px;
+}
+
+.datas_tr{
+    line-height:35px;
+    font-size:16px;
+    font-weight:600;
+    text-align:center;
+}
+
+.datas_tr td{
+    padding:0;
+}
+.datas_td{
+    background-color:#388793;
+    color:#fff;
+    width: 155px;
+}
+
+.fileDatas_tr{
+    font-size:14px;
+}
+
+.fileDatas_tr td{
+    padding:0;
+    text-align:center;
+}
+
+
+.td_bg{background:url(images/tablehead_xieBlack.png) no-repeat; background-size:100% 100%;}
+
+
+table td{
+    white-space:nowrap;
+}
+.hw-p-100{
+    position:absolute;left:0px;top:0px;right:0px;bottom:0px;overflow:auto
+}

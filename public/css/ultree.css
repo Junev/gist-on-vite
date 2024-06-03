@@ -1,0 +1,81 @@
+        .indent-0{
+            margin-left:1em;
+        }
+        .indent-1{
+            margin-left:2.5em;
+        }
+        .indent-2{
+            margin-left:4em;
+        }
+        .indent-3{
+            margin-left:5.5em;
+        }
+        .indent-4{
+            margin-left:7em;
+        }
+        .indent-5{
+            margin-left:8.5em;
+        }
+        .indent-6{
+            margin-left:10em;
+        }
+        .indent-7{
+            margin-left:11.5em;
+        }
+        .indent-8{
+            margin-left:13em;
+        }
+        .indent-9{
+            margin-left:14.5em;
+        }
+       
+        .ultree>.list-group:last-child {
+             border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        }
+
+        .ultreeNode {
+            position: relative;
+            display: block;
+            padding:  0px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
+            border-bottom: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-top: 1px solid rgba(0, 0, 0, 0.125);
+            border-radius: 0px 0px 0px 0px;
+            cursor: pointer;
+            align-items:Center;
+        }
+        .ultreeNode:last-child,.ultreeNode:first-child{
+            border-radius: 0px 0px 0px 0px;
+        }
+        .ultreeNodeTitle {
+            min-height:40px;display:flex;align-items:Center;
+            font-size: 16px;
+        }
+        .ultreeNodeTitle > a.lapsed > .lapseicon::after {
+                margin-right: 8px;
+                display: inline-block;
+                width: 0;
+                height: 0;
+                vertical-align: 0.255em;
+                content: "";
+                border-top: 0.3em solid;
+                border-right: 0.3em solid transparent;
+                border-bottom: 0;
+                border-left: 0.3em solid transparent;
+            }
+        .ultreeNodeTitle > a.unlapsed > .lapseicon::after {
+                margin-right: 8px;
+                display: inline-block;
+                width: 0;
+                height: 0;
+                vertical-align: 0em;
+                content: "";
+                border-top: 0.3em solid transparent;
+                border-bottom: 0.3em solid transparent;
+                border-right: 0;
+                border-left: 0.3em solid;
+            }
+        .ultreeNodeTitle>a{text-decoration: none;}
+        .ultreeNodeTitle>a:hover,.ultreeNodeTitle>a:focus{color: #74777b;text-decoration:none;}

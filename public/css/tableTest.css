@@ -1,0 +1,53 @@
+﻿.fixRow{
+    width:5%;
+}
+
+.spaceTD{
+    width:3%;
+}
+
+
+.ibg-lanshen{
+    
+    background-color:#055c97;
+    color:#ffffff;
+}
+
+.ibg-hongshen{
+    
+    background-color:#920f0f;
+    color:#ffffff;
+}
+
+.ibg-lvshen{
+    
+    background-color:#014517;
+    color:#ffffff;
+}
+
+#totalTitle h3{
+    font-weight:800;
+    color:#063555;
+}
+
+#h5 div p{
+    font-weight:700;
+    /*color:#4b651e;*/
+}
+
+
+#divfoot{
+    font-weight:600;
+}
+
+#table1{
+    background-color:#85b5d5;
+}
+
+#table1 thead{
+    font-size:17px;
+    font-weight:600;
+    background-color:#055c97;
+    color:#ffffff;
+}
+

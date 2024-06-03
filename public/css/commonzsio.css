@@ -1,0 +1,634 @@
+/*
+====================说明=====================
+*用途:制丝IO平台公用css。
+*内容:1通用结构&2通用自定义css&3常用功能&4其他通用class。
+*编写要求:※注释必须写，写清楚增加的代码段对应的【用法】、【内容描述】、并填写【变更记录】
+*创建信息:罗斯奇20201127
+*【变更记录】（格式:作者/时间/变更描述）:
+1、lsq/201130/部分css变更及新增，搜索【201130lsq】；
+2、作者/时间/变更描述；
+3、作者/时间/变更描述；
+*/
+
+/************1通用布局************START*/
+
+/*功能页面引用，去除自带边距，页面高&宽100%，指定最小高度宽度*/
+
+/* *{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin:0;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    min-height: 800px;
+    min-width: 1600px;
+} */
+/*目前使用的全局布局  2021-03-10 zyp*/
+html, body {
+    height: 100%;
+    margin: 0 !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+/*必须设置高度和宽度之后最小宽高才生效*/
+
+/* （上el-header :页面名称标题栏+下el-main:功能控件布局） */
+
+/* 功能页面顶部标题栏 */
+
+.el-header {
+    height: 4% !important;
+    display: flex;
+    align-items: center;
+    background-color: #4a6a88;
+    color: #ffffff;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+/* 功能控件所在 */
+
+.el-main {
+    height: 95%!important;
+    /* background-color: #64448f; */
+    text-align: left;
+    line-height: 20px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+el-main.border_main {
+    border: 1px solid #dee4ec;
+}
+
+/* zyp  按钮样式*/
+
+el-button.button_shadow {
+    box-shadow: -1px -1px 8px #333333, 1px 1px 8px #333333;
+}
+
+/* 左边框样式 ，极浅灰边框&字符居左*/
+
+.coldivl {
+    color: #333;
+    text-align: left;
+    border-left: solid 1px #dee4ec;
+}
+
+.coldivr {
+    color: #333;
+    text-align: left;
+    border-right: solid 1px #dee4ec;
+}
+
+/* Form元素的input div适用，整体div的外边距 */
+
+.inputDiv {
+    margin-left: 10px !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    clear: both;
+}
+
+/* Form元素的select input适用，整体div的外边距 */
+
+.selcDiv {
+    margin-left: 10px;
+    padding-top: 10px;
+    /* padding-bottom: 1px; */
+    clear: both;
+}
+
+/* Form元素的带有switch input适用，整体div的外边距 */
+
+.switchdiv {
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+/* Form元素的带有switch input适用，整体div的外边距 */
+
+.drawerbtndiv {
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+/************1通用布局（上:页面名称标题栏+下:功能控件布局）***********END※※※※※※※※※※※**/
+
+/*/
+/*/
+
+/*/
+/*/
+
+/*/
+/*/
+
+/************2通用自定义css***********START*/
+
+/* 通用label，控件input,selectinput适用，深蓝字带蓝底左圆角框 ，带向左浮动，与input控件一行*/
+
+.labelDiv {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    height: 38px;
+    width: 20%;
+    background-color: #ebf1ff;
+    color: #3f7ab1;
+    border: 1px solid #81abd3;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    float: left;
+    position: relative;
+    margin-right: -3px;
+    font-size: 15px;
+    z-index: 1;
+}
+
+/* 通用简单label，文本域等适用，不带浮动，input控件左上方显示,文本垂直居中*/
+
+.labeldiv_s {
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    height: 28px;
+    width: 180px;
+    background-color: #ebf1ff;
+    color: #264766;
+    font-size: 15px;
+}
+
+/* elform表单控件，用简单label，文本域等适用，不带浮动，input控件左上方显示,文本垂直居中*/
+
+.ellabeldiv_s {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    width: 30%;
+    border: 1px #81abd3 solid;
+    border-radius: 3px;
+    background-color: #e0e8fa;
+    color: #3f7ab1;
+    font-size: 15px;
+    margin-left: -10px;
+    padding: 5px;
+    padding-left: 5px;
+}
+
+/* 左上显示的btn的div适用，整体div的外边距 */
+
+.btndivl {
+    margin-left: 10px !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* T弹窗中显示的btn的div适用，整体div的外边距 */
+
+.btndivPOP {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* textarea的div专用 */
+
+.textareadiv {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/*多选select的宽度，配合ellabeldiv_s标签使用*/
+
+.elselectw95 {
+    width: 95% !important;
+}
+
+/* 通用分割线，页面子标题下使用，2px浅灰渐变 */
+
+.sLine {
+    background-color: #cacdd1;
+    height: 1px;
+    border: 1px solid #ffffff;
+}
+
+/* 通用分割线，Form页面中使用，1px浅蓝无渐变 */
+
+.sLine_i {
+    width: 88%;
+    margin-left: 7px;
+    margin-top: 8px;
+    margin-bottom: 3px;
+    background-color: #dee4ec;
+    height: 1px;
+}
+
+.sLinePOP {
+    width: 95%;
+    margin-top: -30px;
+    margin-bottom: 20px;
+    background-color: #ccd8f3;
+    height: 1px;
+}
+
+/* 通用子标题div，合适边距，内容垂直居中，深蓝色 */
+
+.stitleDiv {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+
+/* tabs分页用，子标题div，合适边距，加粗字符，图标不配合stitleSpan使用，使用el自带，后置 */
+
+.stitleDiv_tab {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #223c55;
+}
+
+/* 通用子标题图标，深蓝色  2021-02-16  zyp修改 */
+
+.comSTIcon {
+    font-size: 20px !important;
+    color: #5a80c7;
+}
+
+/* 通用子标题图标，深蓝色，30size */
+
+.comSTIcon30 {
+    font-size: 30px !important;
+    color: #4a6a88;
+}
+
+/* 通用，子标题字符样式 span，2分列子标题使用，深灰蓝*/
+
+.stitleSpan {
+    font-size: 15px;
+    color: #223c55;
+    /* margin: 6px 6px 6px 6px; */
+}
+
+/* 通用，子标题字符样式 span，2分列子标题使用，深灰蓝   tableborder*/
+
+.tableborder {
+    /* border: 1px solid #ccd8e4; */
+    border-radius: 3px;
+    padding: 5px;
+    box-shadow: 0px 3px 3px rgba(49, 51, 54, 0.1);
+    /*2021-2-16 zyp  表格边框加阴影*/
+    /* border: 1px solid #DDE5F9;border-radius: 3px;
+    padding-left: 3px; */
+}
+
+.poptableborder {
+    border: 1px solid #d9e1f3;
+    border-radius: 3px;
+}
+
+.formtableborder {
+    border: 1px solid #DDE5F9;
+    border-radius: 3px;
+    padding-left: 3px;
+    margin-left: -10px;
+}
+
+.formtablediv {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dialogI {
+    font-size: 40px !important;
+    color: #3783B8;
+}
+
+.dialogD {
+    font-size: 40px !important;
+    color: #BA1B1B;
+}
+
+.listrow {
+    color: rgb(12, 17, 90);
+    font-size: 16px;
+    font-weight: 600;
+    height: 50px;
+}
+
+.inpswitch {
+    height: 30px;
+    padding-left: 15px;
+}
+
+/************2通用自定义css*************END※※※※※※※※※※※**/
+
+/*/
+/*/
+
+/*/
+/*/
+
+/*/
+/*/
+
+/************3常用功能************START*/
+
+/* 功能页面顶部标题栏 */
+
+/* 高度100%*/
+
+.h-100 {
+    height: 100% !important;
+}
+
+.h-95 {
+    height: 95% !important;
+}
+
+.h-90 {
+    height: 90% !important;
+}
+
+.h-80 {
+    height: 80% !important;
+}
+
+.h-70 {
+    height: 70% !important;
+}
+
+.h-60 {
+    height: 60% !important;
+}
+
+.h-50 {
+    height: 50% !important;
+}
+
+.h-30 {
+    height: 30% !important;
+}
+
+.h-10 {
+    height: 10% !important;
+}
+
+/* 宽度100%*/
+
+.w-100 {
+    width: 100% !important;
+}
+
+/* 宽度95%*/
+
+.w-95 {
+    width: 95% !important;
+}
+
+/* 宽度90%*/
+
+.w-90 {
+    width: 90% !important;
+}
+
+/* 宽度80%*/
+
+.w-80 {
+    width: 80% !important;
+}
+
+/* 宽度75%*/
+
+.w-75 {
+    width: 75% !important;
+}
+
+/* 宽度75%*/
+
+.w-70 {
+    width: 70% !important;
+}
+
+/* 宽度75%*/
+
+.w-65 {
+    width: 65% !important;
+}
+
+/* 宽度75%*/
+
+.w-60 {
+    width: 60% !important;
+}
+
+/* 宽度50%*/
+
+.w-50 {
+    width: 50% !important;
+}
+
+/* 宽度45%*/
+
+.w-45 {
+    width: 45% !important;
+}
+
+/* 宽度40%*/
+
+.w-40 {
+    width: 40% !important;
+}
+
+/* 宽度30%*/
+
+.w-30 {
+    width: 30% !important;
+}
+
+/* 垂直居中 201130lsq修改名称（原vmiddle）*/
+
+.divmiddle {
+    display: flex;
+    align-items: center;
+}
+
+/* div内容贴底部显示 新增201130lsq*/
+
+.divbottom {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* 向左浮动 */
+
+.floatl {
+    position: relative;
+    float: left;
+}
+
+/* 向右浮动 */
+
+.floatr {
+    position: relative;
+    float: right;
+}
+
+/* input控件宽度60% */
+
+.inputW-60 {
+    width: 60%;
+}
+
+/* input控件宽度90% ，textarea专用*/
+
+.inputW-95 {
+    width: 95%;
+}
+
+/* input控件宽度80% */
+
+.inputW-80 {
+    width: 80%;
+}
+
+/* input控件宽度75% */
+
+.inputW-75 {
+    width: 75%;
+}
+
+/* input控件宽度70% */
+
+.inputW-70 {
+    width: 70%;
+}
+
+/* input控件宽度50%，1列 */
+
+.inputW-50 {
+    width: 50%;
+}
+
+/* input控件宽度55%，1列   zyp-0119*/
+
+.inputW-55 {
+    width: 55%;
+}
+
+/* input控件宽度45%，1列   zyp-0119*/
+
+.inputW-45 {
+    width: 45%;
+}
+
+/* input控件宽度30%，1列*/
+
+.inputW-30 {
+    width: 30%;
+}
+
+/* inputselect控件宽度50%，1列 */
+
+.selcW-50 {
+    width: 50%;
+}
+
+/* div内外边距全部为0，且不显示滚动条 新增201130lsq*/
+
+.mp0 {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+/* 设置margin-left为0*/
+
+.ml0 {
+    margin-left: 0px !important;
+}
+
+/* 设置margin-top为0*/
+
+.mt0 {
+    margin-top: 0px !important;
+}
+
+/************3常用功能*************END※※※※※※※※※※※**/
+
+/* 自定义table斑马纹颜色新增201130lsq*/
+
+.el-table .strip-row {
+    background: #e6eef7
+}
+
+/* el-form-item标签自带边距过大，统一减去10px，结合inputDiv*/
+
+.el-form-item {
+    margin: -10px;
+}
+
+/* el-form-item下el-select标签使用，保持间距与inputdiv等距*/
+
+.el-form-item .el-select {
+    margin-top: 10px;
+    width: 29.5%;
+}
+
+/* 用来设置当前页面element全局table 选中某行时的背景色   在table标签上加highlight-current-row即可*/
+
+.el-table__body tr.current-row>td {
+    background-color: #b0c4de !important;
+    color: #fff;
+}
+
+/* 用来设置点击树节点的时候选中某一个节点的背景颜色，在树节点上加 */
+
+.el-tree-node.is-current>.el-tree-node__content {
+    background-color: #b0c4de !important;
+}
+
+/* 根据表单输入框长度用来设置表单验证时候提示信息的样式   zyp-0119  根据表单输入框长度*/
+
+.el-form-item--small .el-form-item__error {
+    margin-top: 2px;
+}
+
+.el-form-item__error {
+    position: absolute !important;
+    top: 16px;
+    text-align: center;
+    width: 160px;
+    height: 22px;
+    border-radius: 2px;
+    font-size: 12px;
+    color: rgb(194, 11, 11);
+    line-height: 21px;
+    z-index: 99;
+    margin-left: 670px;
+}
+
+/* el-card  边框阴影*/
+
+.box-card {
+    position: absolute;
+    box-shadow: -1px -1px 8px #333333, 1px 1px 8px #333333;
+}

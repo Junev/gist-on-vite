@@ -1,0 +1,122 @@
+﻿* {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    a, img {
+        border: 0;
+    }
+
+    body {
+        /*background: #f2f2f2;*/
+        font: 12px/180% Arial, Helvetica, sans-serif, "新宋体";
+    }
+    /* stepInfo */
+    .stepInfo {
+        float: left;
+        position: relative;
+        background: #f2f2f2;
+        margin: 25px auto 0 auto;/*步骤总体边距*/
+        width: 75%;/*步骤总体长度*/
+        padding-left:30px;
+    }
+
+        .stepInfo li {
+            float: left;
+            width: 48%;/*行进线长度*/
+            height: 0.5em;/*行进线宽度*/
+            background: #599492;/*行进线颜色3CB371*/
+        }
+
+    .stepIco {
+        border-radius: 1.5em;
+        padding: 0.5em;/*和radius结合变化圆圈的大小*/
+        background: #48a9a6;/*圆圈颜色#2cd53f*/
+        text-align: center;
+        line-height: 1.6em;/*解释字符串和圆圈之间的距离*/
+        color: #fff;
+        position: absolute;
+        width: 1.4em;
+        height: 1.4em;/*圆圈所占的高和宽*/
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    .stepIco1 {
+        top: -1.1em;
+        left: -1%;
+    }
+
+    .stepIco2 {
+        top: -1.1em;
+        left: 19.2%;
+    }
+
+    .stepIco3 {
+        top: -1.1em;
+        left: 38.4%;
+    }
+    .stepIco4 {
+        top: -1.1em;
+        left: 56.6%;
+    }
+    .stepIco5 {
+        top: -1.1em;
+        left: 75.8%;
+    }
+    .stepIco6 {
+        top: -1.1em;
+        left: 95%;
+    }
+
+    .stepText {
+        color: #666;
+        margin-top: 0.2em;
+        width: 6em;
+        text-align: center;
+        margin-left: -1.9em;
+        font-size: 13px;
+        font-weight: 100;
+        line-height:20px;
+    }
+
+.check-lable {
+    
+    margin:10px;
+    padding-left:7px;
+}
+
+.checkPath_div {
+    padding: 10px; 
+    float: left; 
+    border: solid 2px; 
+    border-radius: 10px; 
+    border-color: #77d1f8; 
+    height: 90px; 
+    width: 75%;
+    /*background-color:#31a7a3;*/
+}
+
+.pathDes_div{
+    font-size:18px;
+    font-weight:600;
+    color:#48a9a6;
+    padding-top:15px;
+    padding-bottom:15px;
+    line-height: 20px;
+    text-align:center;
+    
+
+}
+
+.radio_div{
+    margin:3px;
+    padding-top:80px;
+}
+
+.radio-lable {
+    font-size:15px;
+    font-weight:300;
+
+}

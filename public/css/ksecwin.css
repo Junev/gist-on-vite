@@ -1,0 +1,105 @@
+﻿body {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: whitesmoke;
+}
+.box1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+.win-left {
+    position: absolute;left: 5px;top: 5px;bottom: 5px;width: 500px;border-radius: 10px;border: 1px solid #e6e0e0;
+}
+.win-right {
+    position: absolute;
+    left: 510px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    border-radius: 10px;
+    border: 1px solid #e6e0e0;
+}
+.win-title{
+    position:absolute;left:0px;right:0px;top:0px;height:50px;max-height:50px;border-top-left-radius:10px;border-top-right-radius:10px;overflow:hidden;
+}
+.win-content{
+    position:absolute;left:0px;right:0px;top:50px;bottom:0px;overflow:auto;
+}
+.win-tab-title{
+    position:absolute;left:0px;right:0px;top:0px;height:42px;max-height:42px;overflow:hidden;
+}
+.win-tab-content{
+    position:absolute;left:0px;right:0px;top:42px;bottom:0px;overflow:auto;border-left:solid 1px #e6e0e0;border-right:solid 1px #e6e0e0;border-bottom:solid 1px #e6e0e0;border-bottom-left-radius:10px;border-bottom-right-radius:10px;
+}
+.win-form { 
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+}
+.win-form-tool {
+   position:absolute;left:0px;right:0px;top:0px;height:40px;
+}
+.win-form-title{
+    position:absolute;left:20px;right:20px;top:50px;height:40px; border-bottom: 1px solid #eaeeee; padding-left:40px;
+}
+.win-form-content{
+    position:absolute;left:20px;right:20px;top:100px;bottom:20px;overflow:auto;
+}
+.nav-linkx{
+    border-left:solid 1px #e6e0e0;border-right:solid 1px #e6e0e0;border-top:solid 1px #e6e0e0;border-top-left-radius:10px;border-top-right-radius:30px;
+}
+.borderred{
+    border-color:#ff0000;
+}
+
+
+        .opacity01{
+            opacity:0.1;
+        }
+        .opacity02{
+            opacity:0.2;
+        }
+        .opacity03{
+            opacity:0.3;
+        }
+        .opacity04{
+            opacity:0.4;
+        }
+        .opacity05{
+            opacity:0.5;
+        }
+        .opacity06{
+            opacity:0.6;
+        }
+        .opacity07{
+            opacity:0.7;
+        }
+        .opacity08{
+            opacity:0.8;
+        }
+        .opacity09{
+            opacity:0.9;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 2px;
+        }
+        ::-webkit-scrollbar-track {
+            border-radius: 2px;
+        }
+        ::-webkit-scrollbar-thumb {
+            border-radius: 2px;
+            background: #8a8888;
+        }
+        ::-webkit-scrollbar-corner{
+            border-radius: 2px;
+            background: #8a8888;
+
+        }

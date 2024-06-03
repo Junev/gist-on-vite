@@ -1,0 +1,9 @@
+﻿.table-cell {
+    border-right: solid 1px #d8d3d3;
+}
+.ksectable-header{
+    position:absolute;left:0px;right:0px;top:0px;height:50px;overflow-y:scroll;
+}
+.ksectable-content {
+     position:absolute;left:0px;right:0px;top:45px;bottom:0px;overflow:scroll;
+} 

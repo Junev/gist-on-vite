@@ -1,0 +1,131 @@
+﻿@charset "utf-8";
+/* CSS Document  36648B  */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../images/lginback.jpg);
+    background-size: cover;
+}
+
+/* #93defe */
+
+.login_box {
+    width: 1100px;
+    margin-left: 100px;
+}
+
+.login {
+    height: 440px;
+    width: 460px;
+    padding: 50px;
+    background-color: rgba(248, 250, 252, 0.8);
+    border-radius: 6px;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: -100px;
+    box-shadow: -8px -8px 10px rgb(59, 90, 119), 8px 8px 10px rgb(59, 90, 119);
+}
+
+.login_logo {
+    width: 120px;
+    height: 120px;
+    border: 5px solid #51648c;
+    border-radius: 100px;
+    background: rgb(222, 227, 231);
+    text-align: center;
+    line-height: 110px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.login_name {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login_name p {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    color: #41547e;
+    padding: 10px 0 20px;
+}
+
+.login_logo img {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#password_text {
+    border: 1px solid #DCDEE0;
+    border-radius: 3px;
+    height: 50px;
+    padding: 0px 16px;
+    font-size: 14px;
+    color: #888;
+    outline: none;
+    width: 100%;
+    margin-bottom: 15px;
+    display: block;
+    line-height: 50px;
+}
+
+.loginbm {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #0b3a58;
+    background-color: rgb(212, 221, 230)
+}
+
+/* .loginbm a {
+    font-weight: bold;
+    color: #0b3a58;
+}
+
+.loginbm a:hover {
+    color: #fff;
+} */
+
+.imageId {
+    cursor: pointer;
+    background-color: #4e6699;
+    margin-left: 0px;
+    margin-top: 7px;
+    width: 65px;
+    height: 25px;
+    position: absolute;
+    border: none;
+    /* border-radius: 8px;      */
+}
+
+.loginbtn {
+    background: #4e6699;
+    padding: 10px 80px;
+    border: none;
+    color: #fff;
+    margin-top: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 80px;
+}

@@ -1,0 +1,338 @@
+﻿/*TaskSupervisorColumn
+  TaskSupervisorRow
+  TSRow-title
+  
+  TSRow-foot
+  TSColTitle-Title
+  TSColTitle-TaskName
+  TSColTitle-DetailKey
+  TSColTitle-DetailValue
+  TSColTitle-button
+
+  TSRow-tables
+  TSColTitle-title
+
+  
+    TS-tables-TaskPara
+    TS-tables-ProducCost
+    TS-tables-ControlPara
+    TS-tables-TechnicIndex
+    
+    */
+
+.div-column{
+    float: left;
+    display: block;
+    margin:2px;
+    padding:1px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-size: 13px;
+    font-family:'Microsoft YaHei UI';
+    color:#fff;
+    background-color:black;
+}
+#TaskSupervisor{
+    overflow-y:auto;
+}
+
+
+
+.TaskSupervisorRow{
+    width: 99%;
+    height:49.6%;
+    display: block;
+    margin-bottom: 0.6%;
+    /*background-color:black;*/
+
+}
+
+.TaskSupervisorColumn {
+    float: left;
+    width: 49%;
+    height:100%;
+    display: block;
+    border:solid 3px;
+    border-radius: 10px;
+    border-color:#48a4d9;
+    background-color:black;
+    margin:0.3%;
+    /*margin-bottom: 0.6%;*/
+}
+
+.TSRow-title{
+    margin:2px;
+    padding:1px;
+    width:98%;
+    height:25%;
+    display: block;
+    margin-bottom: 9px;
+}
+
+.TSColTitle-Title{
+    float: left;
+    display: block;
+    height:93%;
+    width:12%;
+    margin:2px;
+    padding:2px;
+    border: solid 5px; 
+    border-radius: 20px; 
+    border-color: #48a4d9; 
+    word-wrap: break-word;
+    font-weight:600;
+    font-size:25px;
+    line-height:33px;
+    text-align:center;
+}
+
+.TSColTitle-TitleDetails{
+    float: left;
+    display: block;
+    height:100%;
+    width:84%;
+    margin:2px;
+    margin-left:3px;
+    margin-top:2px;
+    padding:2px;
+    /*border-radius: 5px;
+    border: solid 1px #f7af2c;*/ 
+    word-wrap: break-word;
+
+}
+
+.TSColTitle-TaskName{
+    float: left;
+    display: block;
+    height:95%;
+    width:2%;
+    padding:3px;
+    padding-left:2px;
+    font-weight:700;
+    font-size:19px;
+    line-height:25px;
+    text-align:center;
+    word-wrap: break-word;
+    /*background:#39abed;*/
+}
+
+.TSTitle-DetailKeyCol{
+    float: left;
+    display: block;
+    height:95%;
+    width:8%;
+    padding-left:2px;
+    padding-top:8px;
+    line-height:45px;
+    text-align:left;
+    
+}
+
+.TSTitle-DetailValueCol{
+    float: left;
+    display: block;
+    height:95%;
+    width:25%;
+    padding-left:1px;
+    padding-right:1px;
+    padding-top:8px;
+    line-height:45px;
+    text-align:left;
+}
+
+.TSTitle-DetailKey{
+    padding-left:5px;
+    font-weight:700;
+    font-size:17px;
+    /*color:#f7af2c;*/
+}
+.TSTitle-DetailValue{
+    padding-left:5px;
+    font-weight:700;
+    font-size:16px;
+    /*color:#f7af2c;*/
+}
+.TSColTitle-buttonCol{
+    float: left;
+    display: block;
+    height:95%;
+    width:12%;
+    line-height:20px;
+    margin-right:1px;
+}
+.TSColTitle-button{
+    
+    font-weight:500;
+    font-size:13px;
+    word-wrap:break-word;
+    border-radius: 6px; 
+    border:2px solid #28668a;
+    text-align:center;
+    background-color:#53b039;
+    margin-bottom:5px;
+    
+}
+
+.TSRow-tables{
+    width:99%;
+    height:30%;
+    display: block;
+    margin-left:3px;
+    /*margin-top:2px;*/
+    padding:1px;
+
+}
+
+.TSCol-tables{
+    width:48%;
+    height:95%;
+    float: left;
+    display: block;
+    overflow-y:auto;
+    margin:5px;
+    border: solid 1px #727171; 
+    /*border-color: #b2aeae;*/ 
+}
+
+.TS-tables{
+    width:99%;
+}
+
+.TS-tables-TaskPara{
+    width:99%;
+
+}
+
+.TSRow-foot{
+    
+    display: block;
+    width:98%;
+    height:7%;
+    background-color:#48a4d9;
+    margin-top:18px;
+    margin-left:5px;
+    border-radius: 6px;
+}
+
+.TSCol-footWarningKey{
+    
+    float: left;
+    display: block;
+    width:15%;
+    height:98%;
+    margin-left:3px;
+    font-size:20px;
+}
+.TSCol-footWarningValue{
+    
+    float: left;
+    display: block;
+    width:52%;
+    height:98%;
+    font-size:23px;
+    font-weight:700;
+}
+
+.TSCol-footDateTime{
+    
+    float: left;
+    display: block;
+    width:26%;
+    height:98%;
+    font-size:15px;
+    font-weight:700;
+    margin-top:5px;
+}
+
+.TSCol-footWarningListButton{
+    
+    float: left;
+    display: block;
+    width:5%;
+    height:98%;
+    text-align:right;
+}
+
+
+
+.TableName{
+    font-size:18px;
+    font-weight:700;
+}
+
+[fontColor="hong"]{
+    color:#e60303;
+}
+[fontColor="huang"]{
+    color:#f7af2c;
+}
+
+[fontColor="zi"]{
+    color:#c26cf6;
+}
+[fontColor="lan"]{
+    color:#4accd4;
+}
+[fontColor="hailan"]{
+    color:#AFEEEE;
+}
+
+[fontColor="lv"]{
+    color:#39a341;
+}
+[fontColor="danlv"]{
+    color:#57c688;
+}
+[fontColor="cheng"]{
+    color:#FF4500;
+}
+
+tbody tr td{
+    /*width:25%;*/
+    font-size:16px;
+    padding:5px;
+    background: -webkit-linear-gradient(#727171, black 40%); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#727171, black 40%); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#727171, black 40%); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#313131, black 50%); /* 标准的语法（必须放在最后） */        
+            
+}
+
+
+table td{
+    border-width:  1px;
+    border-style: solid;
+    border-color: black;
+}
+
+table{
+border-collapse: collapse;
+
+}
+
+thead tr td {
+    width:25%;
+    font-size:16px;
+    padding:3px;
+    background: -webkit-linear-gradient(#727171, black 40%); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#727171, black 40%); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#727171, black 40%); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#5f5f5f, black 50%); /* 标准的语法（必须放在最后） */
+}
+
+.td-linear {
+    background: -webkit-linear-gradient(#727171, black 40%); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#727171, black 40%); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#727171, black 40%); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#aaa3a3, black 10%); /* 标准的语法（必须放在最后） */
+        }
+.button-linear {
+    background: -webkit-linear-gradient(#727171, #53b039 40%); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#727171, #53b039 40%); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#fcc9b2, #bd3806 50%); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#9cdafe, #28668a 60%); /* 标准的语法（必须放在最后）0b6aa1  98FB98*/
+        }

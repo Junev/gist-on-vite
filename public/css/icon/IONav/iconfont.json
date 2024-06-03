@@ -1,0 +1,107 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "67940207",
+      "name": "密码",
+      "font_class": "mima",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "67940208",
+      "name": "密码",
+      "font_class": "yidongduanicon-",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "67940209",
+      "name": "用户",
+      "font_class": "yonghu4",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "67940210",
+      "name": "验证码",
+      "font_class": "yanzhengma1",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "67940211",
+      "name": "日志",
+      "font_class": "rizhi1",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    },
+    {
+      "icon_id": "67940212",
+      "name": "操作日志",
+      "font_class": "NormalCopy",
+      "unicode": "e67b",
+      "unicode_decimal": 59003
+    },
+    {
+      "icon_id": "67940213",
+      "name": "配置",
+      "font_class": "peizhi2",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "67940214",
+      "name": "验证码",
+      "font_class": "yanzhengma2",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "67940215",
+      "name": "配置",
+      "font_class": "peizhi4",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "67940216",
+      "name": "用户",
+      "font_class": "yonghu7",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "67940217",
+      "name": "数据服务平台",
+      "font_class": "shujufuwupingtailogo",
+      "unicode": "e6f8",
+      "unicode_decimal": 59128
+    },
+    {
+      "icon_id": "67940218",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "67940219",
+      "name": "服务测试",
+      "font_class": "fuwuceshi1",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "74546827",
+      "name": "生产管理系统",
+      "font_class": "shengchanguanlixitong",
+      "unicode": "e8f6",
+      "unicode_decimal": 59638
+    }
+  ]
+}
